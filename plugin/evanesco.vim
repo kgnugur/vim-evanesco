@@ -38,7 +38,7 @@ xnoremap <silent> <Plug>Evanesco_#  <Esc>:<C-U>call evanesco#evanesco_visual_sta
 " command to echo or be saved in command history
 nnoremap <silent> <Plug>Evanesco_visual_search_end :<C-U>call evanesco#evanesco_star_end()<CR>:echo<CR>
 
-for key in ['/', '?', 'n', 'N', '*', '#', 'g*', 'g#', 'gd', 'gD']
+for key in ['/', '?', 'n', 'N', '*', '#', 'g*', 'g#']
     if !hasmapto(printf("<Plug>Evanesco_%s", key), "n")
         execute printf("nmap %s <Plug>Evanesco_%s", key, key)
     endif
